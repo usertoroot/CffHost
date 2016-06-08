@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="jquery.dataTables.min.css">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.dataTables.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() 
+        {
+            $('#example').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "data?{0}"
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                {1}
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                {1}
+            </tr>
+        </tfoot>
+    </table>
+</body>
