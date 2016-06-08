@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55A16C68-BC61-4BE3-A4F3-6BE28F184067}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CffHost</RootNamespace>
+    <AssemblyName>CffHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BfString.cs" />
+    <Compile Include="BfWString.cs" />
+    <Compile Include="BinaryReaderExtension.cs" />
+    <Compile Include="BinaryWriterExtension.cs" />
+    <Compile Include="Cff\9000.cs" />
+    <Compile Include="Cff\9001.cs" />
+    <Compile Include="Cff\9007.cs" />
+    <Compile Include="Cff\9008.cs" />
+    <Compile Include="Cff\9009.cs" />
+    <Compile Include="Cff\9010.cs" />
+    <Compile Include="Cff\9011.cs" />
+    <Compile Include="Cff\9012.cs" />
+    <Compile Include="Cff\9015.cs" />
+    <Compile Include="Cff\9016.cs" />
+    <Compile Include="Cff\9017.cs" />
+    <Compile Include="Cff\9018.cs" />
+    <Compile Include="Cff\9023.cs" />
+    <Compile Include="Cff\9030.cs" />
+    <Compile Include="Cff\9031.cs" />
+    <Compile Include="Cff\9055.cs" />
+    <Compile Include="Cff\9056.cs" />
+    <Compile Include="Cff\9100.cs" />
+    <Compile Include="Cff\9101.cs" />
+    <Compile Include="Cff\9102.cs" />
+    <Compile Include="Cff\9104.cs" />
+    <Compile Include="Cff\9105.cs" />
+    <Compile Include="Cff\9106.cs" />
+    <Compile Include="Cff\9107.cs" />
+    <Compile Include="Cff\9108.cs" />
+    <Compile Include="Cff\9109.cs" />
+    <Compile Include="Cff\9110.cs" />
+    <Compile Include="Cff\9111.cs" />
+    <Compile Include="Cff\9112.cs" />
+    <Compile Include="Cff\9113.cs" />
+    <Compile Include="Cff\9114.cs" />
+    <Compile Include="Cff\9115.cs" />
+    <Compile Include="Cff\9116.cs" />
+    <Compile Include="Cff\9117.cs" />
+    <Compile Include="LengthType.cs" />
+    <Compile Include="LengthTypeAttribute.cs" />
+    <Compile Include="Master.cs" />
+    <Compile Include="MimeTypeMap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
